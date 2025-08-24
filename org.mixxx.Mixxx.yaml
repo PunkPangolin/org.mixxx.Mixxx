@@ -1,6 +1,6 @@
 app-id: org.mixxx.Mixxx
 runtime: org.kde.Platform
-runtime-version: '6.8'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 command: mixxx
 rename-icon: mixxx
@@ -87,8 +87,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/google/googletest/releases/download/v1.16.0/googletest-1.16.0.tar.gz
-        sha256: 78c676fc63881529bf97bf9d45948d905a66833fbfa5318ea2cd7478cb98f399
+        url: https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz
+        sha256: 65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c
 
   # Google benchmark library
   - name: benchmark
@@ -100,8 +100,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/google/benchmark/archive/refs/tags/v1.9.2.tar.gz
-        sha256: 409075176168dc46bbb81b74c1b4b6900385b5d16bfc181d678afb060d928bd3
+        url: https://github.com/google/benchmark/archive/refs/tags/v1.9.4.tar.gz
+        sha256: b334658edd35efcf06a99d9be21e4e93e092bd5f95074c1673d5c8705d95c104
 
   # Microsoft GSL library
   - name: gsl
@@ -126,8 +126,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v30.2/protobuf-30.2.tar.gz
-        sha256: fb06709acc393cc36f87c251bb28a5500a2e12936d4346099f2c6240f6c7a941
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protobuf-32.0.tar.gz
+        sha256: 9dfdf08129f025a6c5802613b8ee1395044fecb71d38210ca59ecad283ef68bb
     cleanup:
       - /bin
 
@@ -148,8 +148,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/PortMidi/portmidi/archive/refs/tags/v2.0.4.tar.gz
-        sha256: 64893e823ae146cabd3ad7f9a9a9c5332746abe7847c557b99b2577afa8a607c
+        url: https://github.com/PortMidi/portmidi/archive/refs/tags/v2.0.6.tar.gz
+        sha256: 81d22b34051621cd56c8d5ef12908ef2a59764c9cdfba6dae47aabddb71ac914
     cleanup:
       - /bin
 
@@ -160,23 +160,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.14.0.tar.gz
-        sha256: a5714234abe6e1f53647dd8cba7d69f65f71c558b7896ed218864ffcf405bcbd
-
-  # Audio metadata library
-  - name: taglib
-    buildsystem: cmake-ninja
-    config-opts:
-      # Enable shared libraries and disable tests
-      - -DBUILD_SHARED_LIBS=ON
-      - -DBUILD_TESTING=OFF
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-    sources:
-      - type: archive
-        url: https://taglib.org/releases/taglib-1.13.1.tar.gz
-        sha256: c8da2b10f1bfec2cd7dbfcd33f4a2338db0765d851a50583d410bacf055cfd0b
-    cleanup:
-      - /bin
+        url: https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.15.0.tar.gz
+        sha256: 5d84dec684c27b97b921d2f3b73218cb773cf4ea915caee317ac8fc73cef8136
 
   # Audio fingerprinting library
   - name: chromaprint
@@ -258,7 +243,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped.git
-        commit: 585981a49f2186b0d2e47c64bf6b5abf539395f8
+        commit: 529b87452cd33d45e1d0a5066d20b64f10b38845
 
   # Mod-like music format library
   - name: libmodplug
