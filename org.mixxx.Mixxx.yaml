@@ -163,21 +163,6 @@ modules:
         url: https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.14.0.tar.gz
         sha256: a5714234abe6e1f53647dd8cba7d69f65f71c558b7896ed218864ffcf405bcbd
 
-  # Audio metadata library
-  - name: taglib
-    buildsystem: cmake-ninja
-    config-opts:
-      # Enable shared libraries and disable tests
-      - -DBUILD_SHARED_LIBS=ON
-      - -DBUILD_TESTING=OFF
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-    sources:
-      - type: archive
-        url: https://taglib.org/releases/taglib-1.13.1.tar.gz
-        sha256: c8da2b10f1bfec2cd7dbfcd33f4a2338db0765d851a50583d410bacf055cfd0b
-    cleanup:
-      - /bin
-
   # Audio fingerprinting library
   - name: chromaprint
     buildsystem: cmake-ninja
