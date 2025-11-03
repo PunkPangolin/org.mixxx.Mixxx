@@ -126,8 +126,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protobuf-32.0.tar.gz
-        sha256: 9dfdf08129f025a6c5802613b8ee1395044fecb71d38210ca59ecad283ef68bb
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v33.0/protobuf-33.0.tar.gz
+        sha256: cbc536064706b628dcfe507bef386ef3e2214d563657612296f1781aa155ee07
     cleanup:
       - /bin
 
