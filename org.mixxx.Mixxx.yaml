@@ -70,9 +70,6 @@ modules:
   - shared-modules/linux-audio/lv2.json
   - shared-modules/linux-audio/lilv.json
 
-  # Required by UPower
-  - shared-modules/gudev/gudev.json
-
   # Google test framework
   - name: googletest
     buildsystem: cmake-ninja
